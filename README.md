@@ -570,3 +570,89 @@ inference optimization
 AI infrastructure
 custom model research
 Rust AI tooling contributions
+
+
+
+Recommended Folder Structure
+
+
+neural_net/
+│
+├── Cargo.toml
+├── Cargo.lock
+│
+├── data/
+│   ├── train.csv
+│   ├── test.csv
+│   └── mnist/
+│
+├── models/
+│   ├── saved_weights.bin
+│   └── checkpoints/
+│
+├── src/
+│   │
+│   ├── main.rs
+│   │
+│   ├── network/
+│   │   ├── mod.rs
+│   │   ├── network.rs
+│   │   ├── layer.rs
+│   │   ├── sequential.rs
+│   │   └── parameters.rs
+│   │
+│   ├── tensor/
+│   │   ├── mod.rs
+│   │   ├── tensor.rs
+│   │   ├── matrix_ops.rs
+│   │   └── shape.rs
+│   │
+│   ├── activations/
+│   │   ├── mod.rs
+│   │   ├── relu.rs
+│   │   ├── sigmoid.rs
+│   │   ├── softmax.rs
+│   │   └── tanh.rs
+│   │
+│   ├── loss/
+│   │   ├── mod.rs
+│   │   ├── mse.rs
+│   │   └── cross_entropy.rs
+│   │
+│   ├── optimizers/
+│   │   ├── mod.rs
+│   │   ├── sgd.rs
+│   │   └── adam.rs
+│   │
+│   ├── training/
+│   │   ├── mod.rs
+│   │   ├── trainer.rs
+│   │   ├── backprop.rs
+│   │   └── metrics.rs
+│   │
+│   ├── dataset/
+│   │   ├── mod.rs
+│   │   ├── loader.rs
+│   │   ├── preprocessing.rs
+│   │   └── batching.rs
+│   │
+│   ├── utils/
+│   │   ├── mod.rs
+│   │   ├── random.rs
+│   │   ├── serialization.rs
+│   │   └── math.rs
+│   │
+│   └── config/
+│       ├── mod.rs
+│       └── hyperparameters.rs
+│
+├── tests/
+│   ├── tensor_tests.rs
+│   ├── activation_tests.rs
+│   ├── gradient_tests.rs
+│   └── network_tests.rs
+│
+└── examples/
+    ├── xor.rs
+    ├── mnist.rs
+    └── binary_classifier.rs
